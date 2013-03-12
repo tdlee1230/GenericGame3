@@ -1,0 +1,1 @@
+Same code with a few new functionalities that add flexibility to the code - retrieving variables from parent activity, etc.

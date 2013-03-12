@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tdlee1230.genericgame3"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+
+        <!-- android:theme="@style/AppTheme" -->
+
+        <activity
+            android:name="com.tdlee1230.genericgame3.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tdlee1230.genericgame3.NewOrLoad"
+            android:label="@string/title_activity_new_or_load"
+            android:parentActivityName="com.tdlee1230.genericgame3.Splash"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tdlee1230.genericgame3.Splash" />
+        </activity>
+        <activity
+            android:name="com.tdlee1230.genericgame3.SlotSelect"
+            android:label="@string/title_activity_slot_select"
+            android:parentActivityName="com.tdlee1230.genericgame3.NewOrLoad"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tdlee1230.genericgame3.NewOrLoad" />
+        </activity>
+        <activity
+            android:name="com.tdlee1230.genericgame3.CreateNewGame"
+            android:label="@string/title_activity_create_new_game"
+            android:parentActivityName="com.tdlee1230.genericgame3.SlotSelect"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tdlee1230.genericgame3.SlotSelect" />
+        </activity>
+        <activity
+            android:name="com.tdlee1230.genericgame3.Game"
+            android:label="@string/title_activity_game"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tdlee1230.genericgame3.Splash" />
+        </activity>
+        <activity
+            android:name="com.tdlee1230.genericgame3.Battle"
+            android:label="@string/title_activity_battle"
+            android:screenOrientation="landscape" >   
+        </activity>
+    </application>
+
+</manifest>
